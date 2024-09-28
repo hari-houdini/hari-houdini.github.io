@@ -1,0 +1,48 @@
+.box {
+    width: 100%;
+    border: 1px solid #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateX(-10px);
+        color: #ffffff7d;
+    }
+}
+
+.box-title {
+    padding: 30px;
+    font-size: 35px;
+    font-weight: 700;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background-color: #332e2e;
+}
+
+.box-description {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.character-attrs {
+    width: 30%;
+}
+
+.character-info {
+    width: 70%;
+    border-left: 1px solid #fff;
+}
+
+.block:first-child {
+    padding-top: 10px;
+}
+
+.block:last-child {
+    padding-bottom: 10px;
+}
