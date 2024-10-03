@@ -1,3 +1,5 @@
+import { getIdFromUrl } from "../common.util";
+
 type StarWarsPeopleRes = Omit<StarWarsCharacter, "_id"> & {
     url: string;
 }
@@ -16,14 +18,12 @@ export const resolveStarWarsCharacters = async () => {
         const res = await resolveStarWarsData<Results>(url);
 
         if (res) {
-            const peopleIdRegex = /people\/(\d+)\//;
 
             const characters: StarWarsCharacter[] = res.results.map(({ url, ...rest}) => {
-                const match = url.match(peopleIdRegex)
-                const _id = match?.[1] ?? "";
+                const id = getIdFromUrl(url, "");
                 return {
                     ...rest,
-                    _id,      
+                    _id: id!,      
                 };
             });
             return characters;

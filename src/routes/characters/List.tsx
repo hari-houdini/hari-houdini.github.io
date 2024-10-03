@@ -12,6 +12,8 @@ const CharacterList = () => {
     return (<div>Loading...</div>)
   }
 
+  console.log({characters})
+
   if ( !hasItemsInList(characters)) {
     return (<div>No Data Found!</div>)
   }

@@ -27,6 +27,13 @@ pnpm test
 pnpm cy:open
 ```
 
+### Point to remember
+```
+When running E2E test, run the app locally in another terminal window.
+If not, the test would fail. We can also modify the PORTAL_BASE_URL in the
+cypress test file to point to the deployed URL if needed.
+```
+
 ## Things to do
 
 * Use Context Providers to maintain and modify state across the portal

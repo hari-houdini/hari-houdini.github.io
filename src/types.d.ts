@@ -15,6 +15,7 @@ type StarWarsCharacter = {
     starships: string[];
     created: string;
     edited: string;
+	detail?: string;
 }
 
 type StarWarsPlanet = {

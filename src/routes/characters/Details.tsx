@@ -183,8 +183,8 @@ const CharacterDetails = () => {
     return (<div>Loading...</div>)
   }
 
-  if ( !character ) {
-    return (<div>No Data Found!</div>)
+  if ( !character || character.detail === "Not found" ) {
+    return (<div id="no-data">No Data Found!</div>)
   }
 
   return (
